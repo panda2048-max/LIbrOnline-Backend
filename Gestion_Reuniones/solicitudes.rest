@@ -1,0 +1,107 @@
+POST http://127.0.0.1:5002/reunion HTTP/1.1
+Content-Type: application/json
+
+{
+    "fecha": "2026-05-14",
+    "hora_inicio": "09:00:00",
+    "hora_fin": "10:30:00",
+    "asunto": "Reunión de proyecto",
+    "estado": "Pendiente",
+    "id_usuarios":1,
+    "id_sala":1
+}
+
+###
+GET http://127.0.0.1:5002/reunion HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:8080/reunion/1 HTTP/1.1
+Content-Type: application/json
+
+###
+PUT http://127.0.0.1:5002/reunion HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_reunion": 1,
+    "fecha": "2026-05-14",
+    "hora_inicio": "09:00:00",
+    "hora_fin": "10:30:00",
+    "asunto": "Reunión de proyecto",
+    "estado": "Confirmada"
+}
+
+###
+DELETE http://127.0.0.1:5002/reunion/1 HTTP/1.1
+Content-Type: application/json
+
+
+
+###
+POST http://127.0.0.1:5002/asistente HTTP/1.1
+Content-Type: application/json
+
+{
+    "primer_nombre": "Sebastian",
+    "segundo_nombre": "Andres",
+    "primer_apellido": "Osorio",
+    "segundo_apellido": "Lopez",
+    "id_reunion": 1
+}
+
+###
+GET http://127.0.0.1:5002/asistente HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:5002/asistente/1 HTTP/1.1
+Content-Type: application/json
+
+###
+PUT http://127.0.0.1:5002/asistente HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_asistente": 1,
+    "primer_nombre": "Sebastian",
+    "segundo_nombre": "Alejandro",
+    "primer_apellido": "Osorio",
+    "segundo_apellido": "Lopez",
+    "id_reunion": 1
+}
+
+###
+DELETE http://127.0.0.1:5002/asistente/1 HTTP/1.1
+Content-Type: application/json
+
+
+
+###
+POST http://127.0.0.1:5002/sala HTTP/1.1
+Content-Type: application/json
+
+{
+    "piso": "Piso 3"
+}
+
+###
+GET http://127.0.0.1:5002/sala HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:5002/sala/1 HTTP/1.1
+Content-Type: application/json
+
+###
+PUT http://127.0.0.1:5002/sala HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_sala": 1,
+    "piso": "Piso 5"
+}
+
+###
+DELETE http://127.0.0.1:5002/sala/1 HTTP/1.1
+Content-Type: application/json
