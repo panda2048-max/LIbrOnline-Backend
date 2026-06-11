@@ -1,0 +1,123 @@
+POST http://127.0.0.1:5003/curso HTTP/1.1
+Content-Type: application/json
+
+{
+    "nivel_curso": "2°",
+    "letra": "A",
+    "id_sala": 4,
+    "id_docente": 1,
+    "id_usuarios": 1,
+    "id_asignaturas": [1,2]
+}
+###
+GET http://127.0.0.1:5003/curso HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:5003/curso/1 HTTP/1.1
+Content-Type: application/json
+
+###
+PUT http://127.0.0.1:5003/curso HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_curso": 1,
+    "nivel_curso": "3°",
+    "letra": "B",
+    "id_sala": 1,
+    "id_docente": 1,
+    "id_usuarios": 1,
+    "id_asignatura": 2
+}
+
+###
+DELETE http://127.0.0.1:5003/curso/1 HTTP/1.1
+Content-Type: application/json
+
+
+####
+POST http://127.0.0.1:5003/docente HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre_docente": "Carlos Pérez",
+    "especialidad": "Matemáticas"
+}
+
+###
+POST http://127.0.0.1:5003/docente HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre_docente": "Ana Torres",
+    "especialidad": "Historia"
+}
+
+###
+GET http://127.0.0.1:5003/docente HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:5003/docente/1 HTTP/1.1
+Content-Type: application/json
+
+###
+PUT http://127.0.0.1:5003/docente HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_docente": 1,
+    "nombre_docente": "Carlos Muñoz",
+    "especialidad": "Física"
+}
+
+###
+DELETE http://127.0.0.1:5003/docente/2 HTTP/1.1
+Content-Type: application/json
+
+
+###
+POST http://127.0.0.1:5003/asignatura HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre_asignatura": "Matemáticas"
+}
+
+###
+POST http://127.0.0.1:5003/asignatura HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre_asignatura": "Historia"
+}
+
+###
+POST http://127.0.0.1:5003/asignatura HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre_asignatura": "Lenguaje"
+}
+
+###
+GET http://127.0.0.1:5003/asignatura HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:5003/asignatura/1 HTTP/1.1
+Content-Type: application/json
+
+###
+PUT http://127.0.0.1:5003/asignatura HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_asignatura": 1,
+    "nombre_asignatura": "Matemáticas Avanzadas"
+}
+
+###
+DELETE http://127.0.0.1:5003/asignatura/3 HTTP/1.1
+Content-Type: application/json
