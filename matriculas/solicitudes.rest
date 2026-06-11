@@ -1,0 +1,176 @@
+DELETE http://127.0.0.1:9000/hoja_vida/1 HTTP/1.1
+Content-Type: application/json
+###
+POST http://127.0.0.1:9000/hoja_vida HTTP/1.1
+Content-Type: application/json
+
+{
+    "fecha_creacion": "2024-06-15",
+    "id_usuarios":2
+}
+###
+GET http://127.0.0.1:9000/hoja_vida HTTP/1.1
+Content-Type: application/json
+###
+GET http://127.0.0.1:9000/hoja_vida/1 HTTP/1.1
+Content-Type: application/json
+###
+PUT http://127.0.0.1:9000/hoja_vida HTTP/1.1
+Content-Type: application/json
+
+
+###
+DELETE http://127.0.0.1:9000/antecedentes_academicos/1 HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://127.0.0.1:9000/antecedentes_academicos HTTP/1.1
+Content-Type: application/json
+
+{
+    "logros_academicos": "Ganador feria científica",
+    "anno_anterior": "2025-12-01",
+    "prom_anno_anterior": 6.7,
+    "id_hoja": 1
+}
+
+###
+GET http://127.0.0.1:9000/antecedentes_academicos HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:9000/antecedentes_academicos/1 HTTP/1.1
+Content-Type: application/json
+
+###
+PUT http://127.0.0.1:9000/antecedentes_academicos HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_antecedentes_academicos": 1,
+    "logros_academicos": "Primer lugar olimpiadas",
+    "anno_anterior": "2025-12-01",
+    "prom_anno_anterior": 6.9,
+    "id_hoja": 1
+}
+
+###
+DELETE http://127.0.0.1:9000/antecedentes_apoderados/1 HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://127.0.0.1:9000/antecedentes_apoderados HTTP/1.1
+Content-Type: application/json
+
+{
+    "nivel_academico": "Universitario",
+    "numero_hijos": 2,
+    "estado_civil": "Casado",
+    "id_hoja": 1
+}
+
+###
+GET http://127.0.0.1:9000/antecedentes_apoderados HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:9000/antecedentes_apoderados/1 HTTP/1.1
+Content-Type: application/json
+
+###
+PUT http://127.0.0.1:9000/antecedentes_apoderados HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_antecedentes_apoderados": 1,
+    "nivel_academico": "Postgrado",
+    "numero_hijos": 3,
+    "estado_civil": "Casado",
+    "id_hoja": 1
+}
+
+
+###
+DELETE http://127.0.0.1:9000/antecedentes_medicos/1 HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://127.0.0.1:9000/antecedentes_medicos HTTP/1.1
+Content-Type: application/json
+
+{
+    "hospital_nacimiento": "Hospital Central",
+    "enfermedades": "Asma",
+    "lesiones": "Fractura brazo",
+    "medicamentos": "Salbutamol",
+    "fecha_enfermedad": "2024-03-10",
+    "fecha_lesiones": "2023-08-15",
+    "estado_enfermedad": "Controlada",
+    "id_hoja": 1
+}
+
+###
+GET http://127.0.0.1:9000/antecedentes_medicos HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:9000/antecedentes_medicos/1 HTTP/1.1
+Content-Type: application/json
+
+###
+PUT http://127.0.0.1:9000/antecedentes_medicos HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_antecedentes_medico": 1,
+    "hospital_nacimiento": "Hospital Regional",
+    "enfermedades": "Diabetes",
+    "lesiones": "Ninguna",
+    "medicamentos": "Insulina",
+    "fecha_enfermedad": "2022-01-01",
+    "fecha_lesiones": "2023-01-01",
+    "estado_enfermedad": "Estable",
+    "id_hoja": 1
+}
+
+
+###
+DELETE http://127.0.0.1:9000/matricula/1 HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://127.0.0.1:9000/matricula HTTP/1.1
+Content-Type: application/json
+
+{
+    "fecha_matricula": "2026-05-17",
+    "estado_matricula": "Pagada",
+    "coste_matricula": 150000,
+    "iva": 19,
+    "total_matriculas": 178500,
+    "id_hoja": 1
+}
+
+###
+GET http://127.0.0.1:9000/matricula HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:9000/matricula/1 HTTP/1.1
+Content-Type: application/json
+
+###
+PUT http://127.0.0.1:9000/matricula HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_matriculas": 1,
+    "fecha_matricula": "2026-05-17",
+    "estado_matricula": "Pendiente",
+    "coste_matricula": 200000,
+    "iva": 19,
+    "total_matriculas": 238000,
+    "id_hoja": 1
+}
+
+
