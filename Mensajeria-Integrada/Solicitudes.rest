@@ -1,0 +1,24 @@
+### 1. PROBAR SI EL BACKEND ESTÁ VIVO Y LISTA MENSAJES (GET)
+GET http://localhost:5001/mensajeria
+Accept: application/json
+
+###
+
+### 2. CREAR/ENVIAR UNA NOTIFICACIÓN (POST)
+# Este es el que usa el Director o Profesor según tu informe
+POST http://localhost:5001/mensajeria
+Content-Type: application/json
+
+{
+  "titulo": "Reunión de Apoderados 2° Medio",
+  "descripcion": "Se cita a los apoderados a reunión presencial el día viernes a las 18:00 hrs.",
+  "destinatario": "Apoderados",
+  "fechaEnvio": "2026-05-12",
+  "id_usuarios":1
+}
+
+###
+
+### 3. ELIMINAR UN MENSAJE (DELETE)
+# Cambia el "1" por el ID que quieras borrar si implementaste el Delete
+DELETE http://localhost:8080/mensajeria/1

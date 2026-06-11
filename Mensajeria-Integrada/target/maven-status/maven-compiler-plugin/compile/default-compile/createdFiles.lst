@@ -1,0 +1,6 @@
+com\example\Mensajeria\Services\MensajeriaService.class
+com\example\Mensajeria\Models\Entities\Mensajeria.class
+com\example\Mensajeria\Models\Request\AgregarRequest.class
+com\example\Mensajeria\Controller\MensajeriaController.class
+com\example\Mensajeria\Repositories\MensajeriaRepository.class
+com\example\Mensajeria\MensajeriaIntegradaApplication.class
