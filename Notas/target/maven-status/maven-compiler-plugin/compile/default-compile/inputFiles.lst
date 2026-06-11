@@ -1,0 +1,16 @@
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\config\OpenApiConfiguration.java
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\config\WebClientConfig.java
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\controller\EvaluacionController.java
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\controller\NotaController.java
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\model\dto\UsuarioDto.java
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\model\entities\Evaluacion.java
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\model\entities\Nota.java
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\model\request\ActualizarEvaluacion.java
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\model\request\ActualizarNota.java
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\model\request\AgregarEvaluacion.java
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\model\request\AgregarNota.java
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\NotasApplication.java
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\repository\EvaluacionRepository.java
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\repository\NotaRepository.java
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\service\EvaluacionService.java
+C:\Users\fabri\Desktop\microservicios\LibrOnline\Notas\src\main\java\example\Notas\service\NotaService.java

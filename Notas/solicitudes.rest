@@ -1,0 +1,79 @@
+#### Agregar nota
+POST http://127.0.0.1:8000/nota HTTP/1.1
+Content-Type: application/json
+
+{
+  "calificacion": 5.0,
+  "prom_calificacion": null,
+  "id_evaluacion": 2,
+  "rut_usuario": "12345678-9"
+}
+
+
+
+#### Obtener notas
+GET http://127.0.0.1:8000/nota HTTP/1.1
+Content-Type: application/json
+
+
+
+
+
+#### Obtener nota por id
+GET http://127.0.0.1:8000/nota/1 HTTP/1.1
+Content-Type: application/json
+
+
+
+#### Actualizar nota
+PUT http://127.0.0.1:8000/nota HTTP/1.1
+Content-Type: application/json
+
+{
+  "id_nota": 1,
+  "calificacion": 4.0
+}
+
+
+
+#### Eliminar nota
+DELETE http://127.0.0.1:8000/nota/1 HTTP/1.1
+Content-Type: application/json
+
+
+
+
+### Obtener todas las evaluaciones
+GET http://localhost:8000/evaluacion
+
+
+### Obtener evaluación por ID
+GET http://localhost:8000/evaluacion/1
+
+
+### Crear evaluación
+POST http://localhost:8000/evaluacion
+Content-Type: application/json
+
+{
+    "fecha_evaluacion": "2026-05-30",
+    "asignatura": "Historia",
+    "tipo_evaluacion": "Control",
+    "id_usuarios":1
+}
+
+
+### Actualizar evaluación
+PUT http://localhost:8000/evaluacion/1
+Content-Type: application/json
+
+{
+    "fecha_evaluacion": "2026-06-02",
+    "asignatura": "Base de Datos",
+    "tipo_evaluacion": "Examen"
+    
+}
+
+
+### Eliminar evaluación
+DELETE http://localhost:8000/evaluaciones/1
