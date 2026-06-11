@@ -1,0 +1,191 @@
+
+### ELIMINAR DIRECCION
+DELETE http://127.0.0.1:7000/direccion/1
+Content-Type: application/json
+
+###
+
+### AGREGAR DIRECCION
+POST http://127.0.0.1:7000/direccion
+Content-Type: application/json
+
+{
+    "calle": "as",
+    "numero": 2,
+    "id_usuarios": 1,
+    "id_comuna": 1
+}
+
+###
+
+### OBTENER TODAS LAS DIRECCIONES
+GET http://127.0.0.1:7000/direccion
+Content-Type: application/json
+
+###
+
+### OBTENER DIRECCION POR ID
+GET http://127.0.0.1:7000/direccion/1
+Content-Type: application/json
+
+###
+
+### ACTUALIZAR DIRECCION
+PUT http://127.0.0.1:7000/direccion
+Content-Type: application/json
+
+{
+    "id_direccion": 1,
+    "calle": "Nueva Calle",
+    "numero": 123,
+    "id_usuarios": 1,
+    "id_comuna": 1
+}
+
+
+### OBTENER TODOS LOS PAISES
+GET http://127.0.0.1:7000/pais
+
+###
+
+### OBTENER PAIS POR ID
+GET http://127.0.0.1:7000/pais/1
+
+###
+
+### AGREGAR PAIS
+POST http://127.0.0.1:7000/pais
+Content-Type: application/json
+
+{
+    "nombre_pais": "Chile"
+}
+
+###
+
+### ACTUALIZAR PAIS
+PUT http://127.0.0.1:7000/pais
+Content-Type: application/json
+
+{
+    "id_pais": 1,
+    "nombre_pais": "Argentina"
+}
+
+###
+
+### ELIMINAR PAIS
+DELETE http://127.0.0.1:7000/pais/1
+
+### OBTENER TODAS LAS REGIONES
+GET http://127.0.0.1:7000/region
+
+###
+
+### OBTENER REGION POR ID
+GET http://127.0.0.1:7000/region/1
+
+###
+
+### AGREGAR REGION
+POST http://127.0.0.1:7000/region
+Content-Type: application/json
+
+{
+    "nombre_region": "Region Metropolitana",
+    "id_pais": 1
+}
+
+###
+
+### ACTUALIZAR REGION
+PUT http://127.0.0.1:7000/region
+Content-Type: application/json
+
+{
+    "id_region": 1,
+    "nombre_region": "Valparaiso",
+    "id_pais": 1
+}
+
+###
+
+### ELIMINAR REGION
+DELETE http://127.0.0.1:7000/region/1
+
+
+### =========================================
+### CIUDAD
+### =========================================
+
+### OBTENER TODAS LAS CIUDADES
+GET http://127.0.0.1:7000/ciudad
+
+###
+
+### OBTENER CIUDAD POR ID
+GET http://127.0.0.1:7000/ciudad/1
+
+###
+
+### AGREGAR CIUDAD
+POST http://127.0.0.1:7000/ciudad
+Content-Type: application/json
+
+{
+    "nombre_ciudad": "Santiago",
+    "id_region": 1
+}
+
+###
+
+### ACTUALIZAR CIUDAD
+PUT http://127.0.0.1:7000/ciudad
+Content-Type: application/json
+
+{
+    "id_ciudad": 1,
+    "nombre_ciudad": "Providencia",
+    "id_region": 1
+}
+
+###
+
+### ELIMINAR CIUDAD
+DELETE http://127.0.0.1:7000/ciudad/1
+
+
+### OBTENER TODAS LAS COMUNAS
+GET http://127.0.0.1:7000/comuna
+
+###
+
+### OBTENER COMUNA POR ID
+GET http://127.0.0.1:7000/comuna/1
+
+###
+
+### AGREGAR COMUNA
+POST http://127.0.0.1:7000/comuna
+Content-Type: application/json
+
+{
+    "nombre_comuna": "Las Condes",
+    "id_ciudad": 1
+}
+
+###
+
+### ACTUALIZAR COMUNA
+PUT http://127.0.0.1:7000/comuna
+Content-Type: application/json
+
+{
+    "id_comuna": 1,
+    "nombre_comuna": "Puente Alto",
+    "id_ciudad": 1
+}
+
+
+### ELIMINAR COMUNA
+DELETE http://127.0.0.1:7000/comuna/1
