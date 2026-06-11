@@ -1,0 +1,28 @@
+#### Agregar asistencia
+POST http://127.0.0.1:5005/api/asistencia HTTP/1.1
+Content-Type: application/json
+
+{
+  "estudiante": "Juan Pérez",
+  "fecha": "2026-05-06",
+  "estado": "Presente",
+  "id_usuarios":
+}
+
+
+#### Actualizar asistencia
+PUT http://127.0.0.1:5005/api/asistencia/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "estudiante": "Juan Pérez",
+  "fecha": "2026-05-06",
+  "estado": "Ausente"
+}
+
+#### Ver todas las asistencias
+GET http://127.0.0.1:5005/api/asistencia HTTP/1.1
+
+#### Buscar asistencia por ID
+GET http://127.0.0.1:5005/api/asistencia/1 HTTP/1.1
