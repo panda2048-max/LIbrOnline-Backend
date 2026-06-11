@@ -1,0 +1,9 @@
+com\example\Usuarios\models\request\ActualizarUsuario.class
+com\example\Usuarios\repositories\UsuarioRepository.class
+com\example\Usuarios\models\entities\Rol.class
+com\example\Usuarios\services\UsuariosService.class
+com\example\Usuarios\controller\UsuarioController.class
+com\example\Usuarios\models\entities\Usuarios.class
+com\example\Usuarios\UsuariosApplication.class
+com\example\Usuarios\models\entities\Email.class
+com\example\Usuarios\models\request\AgregarUsuario.class
