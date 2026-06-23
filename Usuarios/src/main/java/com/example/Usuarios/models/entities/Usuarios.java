@@ -12,8 +12,8 @@ public class Usuarios {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_usuarios;
 
-    @Column(nullable = false)
-    private String run_usuario;
+    @Column(name = "run_usuario", nullable = false)
+    private String runUsuario;
 
     @Column(nullable = false)
     private String primer_nombre;
@@ -26,6 +26,9 @@ public class Usuarios {
 
     @Column(nullable = false)
     private String ap_materno;
+
+    @Column(nullable = false)
+    private String password;
 
     @Column(nullable = false)
     private String telefono;

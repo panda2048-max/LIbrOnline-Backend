@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.Usuarios.models.entities.Usuarios;
 import com.example.Usuarios.models.request.ActualizarUsuario;
 import com.example.Usuarios.models.request.AgregarUsuario;
+import com.example.Usuarios.models.request.LoginRequest;
+import com.example.Usuarios.models.response.LoginResponse;
+import com.example.Usuarios.services.AuthService;
 import com.example.Usuarios.services.UsuariosService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,6 +29,9 @@ public class UsuarioController {
     
     @Autowired
     private UsuariosService usuariosService;
+
+    @Autowired
+    private AuthService authService;
 
     @GetMapping("")
     public List<Usuarios> obtenerTodosLosUsuarios(){
@@ -51,5 +57,15 @@ public class UsuarioController {
     public String eliminarUsuario(@PathVariable int id_usuario){ // Recibe ID de URL
         return usuariosService.eliminarUsuario(id_usuario); // Elimina de BD, devuelve mensaje
     }
+
+    @PostMapping("/login")
+    public LoginResponse login(@RequestBody LoginRequest request) {
+    System.out.println("REQUEST: " + request);
+    return authService.login(request);
+    }
+            
+    
+            
+            
 
 }

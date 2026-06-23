@@ -10,7 +10,7 @@ public class ActualizarUsuario {
     private int id_usuario;
 
     @NotBlank
-    private String run_usuario;
+    private String runUsuario;
     
     @NotBlank
     private String primer_nombre;
@@ -23,6 +23,9 @@ public class ActualizarUsuario {
 
     @NotBlank
     private String ap_materno;
+    
+    @NotBlank
+    private String password;
 
     @NotBlank
     private String telefono;

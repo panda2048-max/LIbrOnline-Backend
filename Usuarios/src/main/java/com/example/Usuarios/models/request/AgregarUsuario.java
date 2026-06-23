@@ -7,7 +7,7 @@ import lombok.Data;
 public class AgregarUsuario {
     
     @NotBlank
-    private String run_usuario;
+    private String runUsuario;
     
     @NotBlank
     private String primer_nombre;
@@ -20,6 +20,9 @@ public class AgregarUsuario {
 
     @NotBlank
     private String ap_materno;
+
+    @NotBlank
+    private String password;
 
     @NotBlank
     private String telefono;

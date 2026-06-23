@@ -10,9 +10,12 @@ C:\Users\user\Desktop\backend\LIbrOnline-Backend\Usuarios\src\main\java\com\exam
 C:\Users\user\Desktop\backend\LIbrOnline-Backend\Usuarios\src\main\java\com\example\Usuarios\models\request\AgregarEmail.java
 C:\Users\user\Desktop\backend\LIbrOnline-Backend\Usuarios\src\main\java\com\example\Usuarios\models\request\AgregarRol.java
 C:\Users\user\Desktop\backend\LIbrOnline-Backend\Usuarios\src\main\java\com\example\Usuarios\models\request\AgregarUsuario.java
+C:\Users\user\Desktop\backend\LIbrOnline-Backend\Usuarios\src\main\java\com\example\Usuarios\models\request\LoginRequest.java
+C:\Users\user\Desktop\backend\LIbrOnline-Backend\Usuarios\src\main\java\com\example\Usuarios\models\response\LoginResponse.java
 C:\Users\user\Desktop\backend\LIbrOnline-Backend\Usuarios\src\main\java\com\example\Usuarios\repositories\EmailRepository.java
 C:\Users\user\Desktop\backend\LIbrOnline-Backend\Usuarios\src\main\java\com\example\Usuarios\repositories\RolRepository.java
 C:\Users\user\Desktop\backend\LIbrOnline-Backend\Usuarios\src\main\java\com\example\Usuarios\repositories\UsuarioRepository.java
+C:\Users\user\Desktop\backend\LIbrOnline-Backend\Usuarios\src\main\java\com\example\Usuarios\services\AuthService.java
 C:\Users\user\Desktop\backend\LIbrOnline-Backend\Usuarios\src\main\java\com\example\Usuarios\services\EmailServices.java
 C:\Users\user\Desktop\backend\LIbrOnline-Backend\Usuarios\src\main\java\com\example\Usuarios\services\RolServices.java
 C:\Users\user\Desktop\backend\LIbrOnline-Backend\Usuarios\src\main\java\com\example\Usuarios\services\UsuariosService.java

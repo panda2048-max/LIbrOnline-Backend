@@ -32,11 +32,12 @@ public class UsuariosService {
 
     public Usuarios agregarUsuarios(AgregarUsuario nuevoUsuario){
         Usuarios usuarioNuevo = new Usuarios();
-        usuarioNuevo.setRun_usuario(nuevoUsuario.getRun_usuario());
+        usuarioNuevo.setRunUsuario(nuevoUsuario.getRunUsuario());
         usuarioNuevo.setPrimer_nombre(nuevoUsuario.getPrimer_nombre());
         usuarioNuevo.setSegundo_nombre(nuevoUsuario.getSegundo_nombre());
         usuarioNuevo.setAp_paterno(nuevoUsuario.getAp_paterno());
         usuarioNuevo.setAp_materno(nuevoUsuario.getAp_materno());
+        usuarioNuevo.setPassword(nuevoUsuario.getPassword());
         usuarioNuevo.setTelefono(nuevoUsuario.getTelefono());
         return usuarioRepository.save(usuarioNuevo);
 
@@ -61,11 +62,12 @@ public class UsuariosService {
              * ACTUALIZA solo el nombre
              * save() detecta que ya existe → UPDATE SQL
              */
-            Usuario.setRun_usuario(actUsuario.getRun_usuario());
+            Usuario.setRunUsuario(actUsuario.getRunUsuario());
             Usuario.setPrimer_nombre(actUsuario.getPrimer_nombre());
             Usuario.setSegundo_nombre(actUsuario.getSegundo_nombre());
             Usuario.setAp_paterno(actUsuario.getAp_paterno());
             Usuario.setAp_materno(actUsuario.getAp_materno());
+            Usuario.setPassword(actUsuario.getPassword());
             Usuario.setTelefono(actUsuario.getTelefono());
             return usuarioRepository.save(Usuario); // Actualiza en BD
         }

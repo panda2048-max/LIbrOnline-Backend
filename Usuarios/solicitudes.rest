@@ -3,11 +3,12 @@ POST http://127.0.0.1:5000/usuario HTTP/1.1
 Content-Type: application/json
 
 {
-    "run_usuario":"220030423",
+    "runUsuario":"220030423",
     "primer_nombre":"sebastian",
     "segundo_nombre":"jesus",
     "ap_paterno":"ososrio",
     "ap_materno":"brsvo",
+    "password":"1234",
     "telefono":"987654321"
 }
 
@@ -26,3 +27,13 @@ Content-Type: application/json
 ###
 DELETE http://127.0.0.1:5000/usuario/1 HTTP/1.1
 Content-Type: application/json
+
+###
+POST http://127.0.0.1:5000/usuario/login
+Content-Type: application/json
+
+{
+  "runUsuario":"220030423",
+  "password":"1234"
+}
+
