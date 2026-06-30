@@ -48,9 +48,10 @@ public class AsistenciaService {
         }
         Asistencia asistencia = new Asistencia();
         asistencia.setEstudiante(asistenciaRequest.getEstudiante());
-        asistencia.setFecha(LocalDate.now());
+        asistencia.setFecha(asistenciaRequest.getFecha() != null ? asistenciaRequest.getFecha() : LocalDate.now());
         asistencia.setEstado(asistenciaRequest.getEstado());
         asistencia.setId_usuarios(asistenciaRequest.getId_usuarios());
+        asistencia.setId_curso(asistenciaRequest.getId_curso());
         return asistenciaRepository.save(asistencia);
     }
 
@@ -62,6 +63,7 @@ public class AsistenciaService {
         asistenciaExistente.setEstudiante(asistencia.getEstudiante());
         asistenciaExistente.setFecha(asistencia.getFecha());
         asistenciaExistente.setEstado(asistencia.getEstado());
+        asistenciaExistente.setId_curso(asistencia.getId_curso());
         return asistenciaRepository.save(asistenciaExistente);
         }
     }

@@ -27,6 +27,8 @@ public class AgregarReunion {
     @NotBlank
     private int id_usuarios;
 
+    private Integer id_usuario_2;
+
     @NotNull
     private int id_sala;
 

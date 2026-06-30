@@ -6,11 +6,13 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import com.example.Anotaciones.Models.Entities.Anotaciones;
+import com.example.Anotaciones.Models.Request.ActualizarAnotaciones;
 import com.example.Anotaciones.Models.Request.AgregarAnotaciones;
 import com.example.Anotaciones.Services.AnotacionesService;
 
@@ -38,6 +40,12 @@ public class AnotacionesController {
     @PostMapping("")
     public Anotaciones guardar(@RequestBody AgregarAnotaciones anotacion) {
         return anotacionesService.agregarAnotacion(anotacion);
+    }
+
+    @PutMapping("/{id}")
+    public Anotaciones actualizar(@PathVariable Integer id, @RequestBody ActualizarAnotaciones anotacion) {
+        anotacion.setId(id);
+        return anotacionesService.actualizarAnotacion(anotacion);
     }
 
     @DeleteMapping("/{id}")

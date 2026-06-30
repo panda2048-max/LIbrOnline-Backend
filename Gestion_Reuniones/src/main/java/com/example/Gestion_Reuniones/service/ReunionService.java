@@ -64,6 +64,7 @@ public class ReunionService {
             reunionNueva.setAsunto(nueva.getAsunto());
             reunionNueva.setEstado(nueva.getEstado());
             reunionNueva.setId_usuarios(nueva.getId_usuarios());
+            reunionNueva.setId_usuario_2(nueva.getId_usuario_2());
             reunionNueva.setSala(sala);
             return reunionRepository.save(reunionNueva);
     }
@@ -79,6 +80,9 @@ public class ReunionService {
         reunion.setHora_fin(nuevaReunion.getHora_fin());
         reunion.setAsunto(nuevaReunion.getAsunto());
         reunion.setEstado(nuevaReunion.getEstado());
+        if (nuevaReunion.getId_usuario_2() != null) {
+            reunion.setId_usuario_2(nuevaReunion.getId_usuario_2());
+        }
         return reunionRepository.save(reunion);
     }
 

@@ -35,6 +35,7 @@ public class DocenteService {
         Docente docenteNuevo = new Docente();
         docenteNuevo.setNombre(nuevo.getNombre_docente());
         docenteNuevo.setEspecialidad(nuevo.getEspecialidad());
+        docenteNuevo.setId_usuario(nuevo.getId_usuario());
         return docenteRepository.save(docenteNuevo);
     }
 

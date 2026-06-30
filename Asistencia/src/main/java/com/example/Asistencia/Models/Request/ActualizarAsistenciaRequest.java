@@ -19,5 +19,7 @@ public class ActualizarAsistenciaRequest {
 
     @NotBlank
     private String estado;
-   
+
+    private Integer id_curso;
+
 }

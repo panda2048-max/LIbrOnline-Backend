@@ -20,5 +20,7 @@ public class AgregarAnotaciones {
     
     @NotBlank
     private int id_usuarios;
-    
+
+    private Integer id_inspector;
+
 }

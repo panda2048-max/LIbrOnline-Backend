@@ -18,4 +18,6 @@ public class ActualizarEvaluacion {
 
     @NotBlank
     private String tipo_evaluacion;
+
+    private Integer id_curso;
 }

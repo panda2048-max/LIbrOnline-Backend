@@ -27,6 +27,9 @@ public class Docente {
     @Column(nullable = false)
     private String especialidad;
 
+    @Column(name = "id_usuario")
+    private Integer id_usuario;
+
     @OneToMany(mappedBy = "docente")
     @JsonIgnore
     private List<Curso> cursos;

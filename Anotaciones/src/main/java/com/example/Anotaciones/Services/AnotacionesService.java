@@ -10,6 +10,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.example.Anotaciones.Models.Entities.Anotaciones;
+import com.example.Anotaciones.Models.Request.ActualizarAnotaciones;
 import com.example.Anotaciones.Models.Request.AgregarAnotaciones;
 import com.example.Anotaciones.Models.dto.UsuarioDto;
 import com.example.Anotaciones.Repository.AnotacionesRepository;
@@ -51,11 +52,25 @@ public class AnotacionesService {
         Anotaciones anotaciones = new Anotaciones();
         anotaciones.setTipo(nuevoAnotacion.getTipo());
         anotaciones.setDescripcion(nuevoAnotacion.getDescripcion());
-        anotaciones.setFechaCreacion(LocalDate.now());
+        anotaciones.setFechaCreacion(
+                nuevoAnotacion.getFechaCreacion() != null ? nuevoAnotacion.getFechaCreacion() : LocalDate.now());
         anotaciones.setId_usuarios(nuevoAnotacion.getId_usuarios());
+        anotaciones.setId_inspector(nuevoAnotacion.getId_inspector());
         return anotacionesRepository.save(anotaciones);
     }
-    
+
+    public Anotaciones actualizarAnotacion(ActualizarAnotaciones nuevaAnotacion) {
+        Anotaciones anotaciones = anotacionesRepository.findById(nuevaAnotacion.getId())
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.NOT_FOUND,
+                        "Anotación no encontrada"));
+        anotaciones.setTipo(nuevaAnotacion.getTipo());
+        anotaciones.setDescripcion(nuevaAnotacion.getDescripcion());
+        if (nuevaAnotacion.getId_inspector() != null) {
+            anotaciones.setId_inspector(nuevaAnotacion.getId_inspector());
+        }
+        return anotacionesRepository.save(anotaciones);
+    }
 
     public String eliminar(Integer id) {
 

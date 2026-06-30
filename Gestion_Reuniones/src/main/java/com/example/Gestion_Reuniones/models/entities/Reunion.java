@@ -43,6 +43,9 @@ public class Reunion {
     @Column(nullable = false)
     private int id_usuarios;
 
+    @Column(name = "id_usuario_2")
+    private Integer id_usuario_2;
+
     @ManyToOne
     @JsonBackReference
     @JoinColumn(name = "id_sala", nullable = false)

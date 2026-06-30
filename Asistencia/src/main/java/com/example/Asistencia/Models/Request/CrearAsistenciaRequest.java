@@ -20,4 +20,6 @@ public class CrearAsistenciaRequest {
     @NotBlank
     private int id_usuarios;
 
+    private Integer id_curso;
+
 }

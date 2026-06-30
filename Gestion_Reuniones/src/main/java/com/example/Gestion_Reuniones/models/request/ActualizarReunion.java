@@ -25,4 +25,6 @@ public class ActualizarReunion {
 
     @NotBlank
     private String estado;
+
+    private Integer id_usuario_2;
 }

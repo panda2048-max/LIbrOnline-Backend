@@ -29,5 +29,8 @@ public class Evaluacion {
 
     @Column(nullable = false)
     private int id_usuarios;
-    
+
+    @Column(name = "id_curso")
+    private Integer id_curso;
+
 }

@@ -31,4 +31,7 @@ public class Anotaciones {
 
     @Column(nullable = false)
     private int id_usuarios;
+
+    @Column(name = "id_inspector")
+    private Integer id_inspector;
 }

@@ -19,4 +19,6 @@ public class AgregarEvaluacion {
 
     @NotBlank
     private int id_usuarios;
+
+    private Integer id_curso;
 }

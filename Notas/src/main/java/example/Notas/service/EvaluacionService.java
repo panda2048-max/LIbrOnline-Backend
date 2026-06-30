@@ -58,6 +58,7 @@ public class EvaluacionService {
         evaluacion.setAsignatura(nuevaEvaluacion.getAsignatura());
         evaluacion.setTipo_evaluacion(nuevaEvaluacion.getTipo_evaluacion());
         evaluacion.setId_usuarios(nuevaEvaluacion.getId_usuarios());
+        evaluacion.setId_curso(nuevaEvaluacion.getId_curso());
         return evaluacionRepository.save(evaluacion);
         }catch(Exception e){
 
@@ -75,6 +76,7 @@ public class EvaluacionService {
         evaluacion.setFecha_evaluacion(nuevaEvaluacion.getFecha_evaluacion());
         evaluacion.setAsignatura(nuevaEvaluacion.getAsignatura());
         evaluacion.setTipo_evaluacion(nuevaEvaluacion.getTipo_evaluacion());
+        evaluacion.setId_curso(nuevaEvaluacion.getId_curso());
         return evaluacionRepository.save(evaluacion);
         }
     }

@@ -10,4 +10,6 @@ public class AgregarDocente {
     
     @NotBlank
     private String especialidad;
+
+    private Integer id_usuario;
 }
