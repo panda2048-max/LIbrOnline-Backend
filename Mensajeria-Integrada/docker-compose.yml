@@ -1,0 +1,24 @@
+services:
+  mensajeria-service:
+    build: .
+    ports:
+      - "5001:5001"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-mensajeria:3306/mensajeria?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    depends_on:
+      db-mensajeria:
+        condition: service_healthy
+
+  db-mensajeria:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: mensajeria
+      MYSQL_USER: mensajeria
+      MYSQL_PASSWORD: system
+      MYSQL_ROOT_PASSWORD: root
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s

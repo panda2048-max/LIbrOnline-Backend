@@ -1,0 +1,24 @@
+services:
+  matriculas-service:
+    build: .
+    ports:
+      - "9000:9000"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-matriculas:3306/matriculas?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    depends_on:
+      db-matriculas:
+        condition: service_healthy
+
+  db-matriculas:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: matriculas
+      MYSQL_USER: matriculas
+      MYSQL_PASSWORD: system
+      MYSQL_ROOT_PASSWORD: root
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s

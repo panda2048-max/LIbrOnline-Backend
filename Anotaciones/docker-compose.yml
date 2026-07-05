@@ -1,0 +1,24 @@
+services:
+  anotaciones-service:
+    build: .
+    ports:
+      - "5006:5006"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-anotaciones:3306/anotaciones?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    depends_on:
+      db-anotaciones:
+        condition: service_healthy
+
+  db-anotaciones:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: anotaciones
+      MYSQL_USER: anotaciones
+      MYSQL_PASSWORD: system
+      MYSQL_ROOT_PASSWORD: root
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s

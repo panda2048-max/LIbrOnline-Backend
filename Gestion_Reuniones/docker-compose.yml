@@ -1,0 +1,24 @@
+services:
+  gestion-reuniones-service:
+    build: .
+    ports:
+      - "5002:5002"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-gestion-reuniones:3306/gestion_reuniones?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    depends_on:
+      db-gestion-reuniones:
+        condition: service_healthy
+
+  db-gestion-reuniones:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: gestion_reuniones
+      MYSQL_USER: microservicio
+      MYSQL_PASSWORD: system
+      MYSQL_ROOT_PASSWORD: root
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s

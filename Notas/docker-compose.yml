@@ -1,0 +1,24 @@
+services:
+  notas-service:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-notas:3306/notas?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    depends_on:
+      db-notas:
+        condition: service_healthy
+
+  db-notas:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: notas
+      MYSQL_USER: notas
+      MYSQL_PASSWORD: system
+      MYSQL_ROOT_PASSWORD: root
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s

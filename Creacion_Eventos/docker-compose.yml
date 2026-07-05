@@ -1,0 +1,24 @@
+services:
+  creacion-eventos-service:
+    build: .
+    ports:
+      - "5004:5004"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-creacion-eventos:3306/creacion_eventos?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    depends_on:
+      db-creacion-eventos:
+        condition: service_healthy
+
+  db-creacion-eventos:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: creacion_eventos
+      MYSQL_USER: creacion_eventos
+      MYSQL_PASSWORD: system
+      MYSQL_ROOT_PASSWORD: root
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
